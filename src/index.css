@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* 60% White - Dominant backgrounds and surfaces */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* 30% Blue - Primary and secondary elements */
+    --primary: 213 94% 68%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 27% 84%;
+    --secondary-foreground: 213 94% 18%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 213 27% 34%;
+
+    --accent: 213 27% 84%;
+    --accent-foreground: 213 94% 18%;
+
+    /* 10% Orange - Accent and highlight elements */
+    --destructive: 25 95% 53%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 27% 84%;
+    --input: 213 27% 84%;
+    --ring: 213 94% 68%;
+
+    --radius: 0.375rem;
+
+    /* Code Editor Specific Colors - 60% White base */
+    --editor-background: 0 0% 100%;
+    --editor-foreground: 222 47% 11%;
+    --editor-line-highlight: 0 0% 96%;
+    --editor-selection: 213 94% 68% / 0.2;
+    --editor-border: 213 27% 84%;
+    
+    /* Tab Colors - White and Blue scheme */
+    --tab-background: 0 0% 96%;
+    --tab-active: 0 0% 100%;
+    --tab-hover: 213 27% 84%;
+    --tab-border: 213 27% 84%;
+    
+    /* Preview Colors */
+    --preview-background: 0 0% 100%;
+    --preview-border: 213 27% 84%;
+
+    /* Orange accent variables */
+    --orange-accent: 25 95% 53%;
+    --orange-accent-foreground: 0 0% 100%;
+    --orange-light: 25 95% 83%;
+    --orange-dark: 25 95% 23%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme with blue and orange accents */
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    /* 30% Blue in dark theme */
+    --primary: 213 94% 68%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 213 94% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 213 94% 18%;
+    --muted-foreground: 213 27% 84%;
+
+    --accent: 213 94% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    /* 10% Orange accents in dark */
+    --destructive: 25 95% 53%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 213 94% 18%;
+    --input: 213 94% 18%;
+    --ring: 213 94% 68%;
+
+    /* Code Editor Dark Colors */
+    --editor-background: 222 47% 11%;
+    --editor-foreground: 0 0% 98%;
+    --editor-line-highlight: 213 94% 18%;
+    --editor-selection: 213 94% 68% / 0.3;
+    --editor-border: 213 94% 18%;
+    
+    /* Tab Dark Colors */
+    --tab-background: 213 94% 18%;
+    --tab-active: 222 47% 11%;
+    --tab-hover: 213 94% 28%;
+    --tab-border: 213 94% 18%;
+    
+    /* Preview Dark Colors */
+    --preview-background: 0 0% 100%;
+    --preview-border: 213 94% 18%;
+
+    /* Orange accent variables for dark theme */
+    --orange-accent: 25 95% 63%;
+    --orange-accent-foreground: 222 47% 11%;
+    --orange-light: 25 95% 73%;
+    --orange-dark: 25 95% 33%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
